@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, Routes, Route } from "react-router-dom";
 import { About } from "./pages/About";
 import { Welcome } from "./pages/Welcome";
+import { NewPage } from './pages/NewPage.tsx';
 
 export const App = () => {
     const [count, setCount] = useState(0);
@@ -24,12 +25,14 @@ export const App = () => {
             <div style={{ display: 'flex', gap: 12 }}>
                 <Link to={'about'}>About</Link>
                 <Link to={'welcome'}>Welcome</Link>
+                <Link to={'new-page'}>New page</Link>
             </div>
 
             <div>
                 <Routes>
                     <Route path='/about' element={<About />} />
                     <Route path='/welcome' element={<Welcome />} />
+                    <Route path='/new-page' element={<NewPage />} />
                 </Routes>
             </div>
         </>
